@@ -7,9 +7,9 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+  //<React.StrictMode> Tirando o Strict Mode resolveu o problema de perguntar duas vezes
     <App />
-  </React.StrictMode>
+  //</React.StrictMode>
 );
 
 reportWebVitals();

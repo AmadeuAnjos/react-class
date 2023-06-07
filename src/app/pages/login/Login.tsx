@@ -1,9 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export const Login = () => {
+export const Login = () => {   
 
-    const [email, setEmail] = useState('teste');
+    const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
+
+    useEffect(() => {
+        if(window.confirm('You are brasileiro ?')) {
+            console.log("Yes")
+        } else {
+            console.log("No")
+        }        
+    }, []);
+
+    useEffect(() => {
+        console.log(email)
+    }, [email]);
+
+    useEffect(() => {
+        console.log(pass) 
+    }, [pass]);
 
     const handleEntrar = () => {
         console.log(email)
